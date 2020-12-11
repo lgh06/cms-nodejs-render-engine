@@ -15,8 +15,17 @@ Then,
 - *Lazy load data to page. 
 
 
+提示：  
+
+安装sqlite3需要配置node_pre_gyp的mirror，否则需要VPN。  
+
+所以，请用下面的命令npm install:    
+
 ```
-npm install sqlite3 --sqlite3_binary_host_mirror=https://npm.taobao.org/mirrors/sqlite3/
+
+
+npm install --sqlite3_binary_host_mirror=https://npm.taobao.org/mirrors/sqlite3/
+
 ```
 
 
