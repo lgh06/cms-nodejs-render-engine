@@ -1,6 +1,7 @@
 # cms-nodejs-render-engine  
 
 尝试用最简单的sqlite数据库、handlebars模板引擎、koa、knex做出来一套CMS.  
+（sqlite后期可更换为MySQL。 目前仅作为可行性验证使用的数据库。）
 
 
 Plans:  
