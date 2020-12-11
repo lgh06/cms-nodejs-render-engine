@@ -1,5 +1,5 @@
 {
-  "name": "cms-nodejs",
+  "name": "cms-nodejs-render-engine",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
