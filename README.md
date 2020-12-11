@@ -13,3 +13,8 @@ Then,
 - Read template from DB.  
 - Inject data to page.  
 - *Lazy load data to page. 
+
+
+```
+npm install sqlite3 --sqlite3_binary_host_mirror=https://npm.taobao.org/mirrors/sqlite3/
+```

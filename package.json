@@ -11,10 +11,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@koa/router": "^10.0.0",
+    "knex": "^0.21.12",
     "koa": "^2.13.0",
-    "mustache": "^4.1.0"
+    "mustache": "^4.1.0",
+    "sqlite3": "^5.0.0"
   },
   "engines": {
-    "node" : ">=12"
+    "node": ">=12"
   }
 }
