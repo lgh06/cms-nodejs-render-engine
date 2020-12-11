@@ -2,8 +2,6 @@ const Koa = require('koa');
 var Router = require('@koa/router');
 var db = require('./db');
 
-const Mustache = require('mustache');
-
 const Handlebars = require("handlebars");
 
 const app = new Koa();
@@ -13,15 +11,7 @@ const router = new Router();
 router.get('/', async (ctx, next) => {
   // ctx.router available
   
-  var view = {
-    title: "Joe",
-    calc: function () {
-      return 2 + 4;
-    }
-  };
-  
-  var output = Mustache.render("{{title}} spends {{calc}}", view);
-  ctx.body = output;
+  ctx.body = 'Hello World';
 });
 
 router.get('/db', async (ctx, next) => {
