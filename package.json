@@ -5,19 +5,24 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./app.js"
+    "start": "nodemon ./app.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@koa/router": "^10.0.0",
+    "handlebars": "^4.7.6",
     "knex": "^0.21.12",
     "koa": "^2.13.0",
+    "lodash": "^4.17.20",
     "mustache": "^4.1.0",
     "sqlite3": "^5.0.0"
   },
   "engines": {
     "node": ">=12"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
   }
 }

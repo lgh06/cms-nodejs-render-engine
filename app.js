@@ -4,6 +4,8 @@ var db = require('./db');
 
 const Mustache = require('mustache');
 
+const Handlebars = require("handlebars");
+
 const app = new Koa();
 const router = new Router();
 
@@ -28,6 +30,24 @@ router.get('/db', async (ctx, next) => {
   ctx.body = t
 });
 
+router.get('/hand', (ctx) => {
+  const template = Handlebars.compile("Name: {{name}}");
+  ctx.body = (template({ name: "Nils" }));
+})
+
+// Handlebars AST parse test.
+router.get('/hand2', (ctx) => {
+  const template = Handlebars.parse(`Name: {{name}}
+    {{bye}}
+  `);
+  ctx.body = template;
+  var body = template.body.filter((v)=> {
+    // fileter Mustache expression object from array
+    if (v.type === 'MustacheStatement')
+    return true;
+  })
+  console.log(body.map(v => (v.path && v.path.original) || ''))
+})
 app
   .use(router.routes())
   .use(router.allowedMethods());
