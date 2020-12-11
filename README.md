@@ -18,3 +18,8 @@ Then,
 ```
 npm install sqlite3 --sqlite3_binary_host_mirror=https://npm.taobao.org/mirrors/sqlite3/
 ```
+
+
+数据库文件：  
+
+链接: https://pan.baidu.com/s/1O7ssc1nyLso5J9GrS7kyUA 提取码: u88p
