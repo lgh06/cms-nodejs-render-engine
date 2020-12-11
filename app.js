@@ -27,16 +27,23 @@ router.get('/hand', (ctx) => {
 
 // Handlebars AST parse test.
 router.get('/hand2', (ctx) => {
-  const template = Handlebars.parse(`Name: {{name}}
-    {{bye}}
-  `);
-  ctx.body = template;
-  var body = template.body.filter((v)=> {
+  var str = `Name: {{name}}
+    Bye: {{bye}}
+  `;
+  const parsedTemplate = Handlebars.parse(str);
+  // ctx.body = parsedTemplate;
+  var body = parsedTemplate.body.filter((v)=> {
     // fileter Mustache expression object from array
     if (v.type === 'MustacheStatement')
     return true;
   })
-  console.log(body.map(v => (v.path && v.path.original) || ''))
+  var names = body.map(v => (v.path && v.path.original) || '');
+
+  var data = {};
+  names.forEach( (v,i) => data[v] = i + ' is ' + Math.random());
+
+  ctx.body = Handlebars.compile(parsedTemplate)(data);
+
 })
 app
   .use(router.routes())
