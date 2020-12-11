@@ -23,8 +23,6 @@ Then,
 所以，请用下面的命令npm install:    
 
 ```
-
-
 npm install --sqlite3_binary_host_mirror=https://npm.taobao.org/mirrors/sqlite3/
 
 ```
